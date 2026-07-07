@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>RPG de Turno</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <h1>Motor de Combate RPG</h1>
+    
+    <div class="alvo-status">
+        <h3 id="alvo-nome">Boneco de Treino</h3>
+        <p>Vida: <strong id="alvo-hp">500</strong> / 500</p>
+    </div>
+
+    <div class="container">
+        <div class="painel">
+            <h2>1. Fábrica de Clones</h2>
+            <button onclick="facade.clonarMonstro()">Clonar Monstro Base</button>
+            <hr>
+            <h3>Horda de Monstros</h3>
+            <div id="lista-monstros"></div>
+        </div>
+
+        <div class="painel">
+            <h2>2. Customização</h2>
+            <div id="controles-customizacao" style="display:none;">
+                <h4 id="monstro-selecionado-nome">Monstro Selecionado</h4>
+                <button onclick="facade.equiparItem('runa')">Equipar Runa de Fogo</button>
+                <button onclick="facade.equiparItem('escudo')">Equipar Escudo</button>
+                <button onclick="facade.mudarEstrategia('fisico')">Estratégia: Fisico</button>
+                <button onclick="facade.mudarEstrategia('furtivo')">Estratégia: Furtivo</button>
+                <button onclick="facade.mudarEstrategia('cura')">Estratégia: Curador</button>
+            </div>
+            <p id="aviso-selecao">Nenhum monstro selecionado.</p>
+        </div>
+
+        <div class="painel">
+            <h2>3. Linha do Tempo</h2>
+            <button onclick="facade.atacarComSelecionado()">Executar Turno</button>
+            <button onclick="facade.executarAtaqueTotal()">Ataque Total</button>
+            <button onclick="facade.desfazer()" class="btn-danger">Desfazer</button>
+            <h3>Log de Batalha</h3>
+            <div id="log" class="log-box"></div>
+        </div>
+    </div>
+
+   <script type="module" src="./js/script.js"></script>
+</body>
+</html>
