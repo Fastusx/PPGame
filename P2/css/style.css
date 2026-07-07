@@ -1,0 +1,59 @@
+body { 
+    font-family: sans-serif;
+     background-color: #1e1e24; 
+     color: #f5f5f5;
+    margin: 20px; 
+    }
+
+h1 { 
+    color: #ffca3a;
+    text-align: center; 
+}
+
+.container{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+ }
+
+.painel { 
+    background-color: #2a2a35;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #444;
+}
+
+button {
+    background-color: #8ac926;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-danger { 
+    background-color: #ff595e;
+    color: white;
+}
+
+.monstro-card {
+    background: #3a3a4a;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 5px solid #8ac926;
+}
+
+.log-box {
+    background-color: #111;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    color: #00ff66;
+}
+.alvo-status {
+    background-color: #331832;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #ff595e;
+}
